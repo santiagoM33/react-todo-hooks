@@ -9,9 +9,7 @@ import TasksList from "./components/TasksList";
 function App() {
   //Arreglo de Tareas
   const [tasks, setTasks] = useState([]);
-
-  // funcion que toma las tareas actuales y agregue la nueva
-  // Tambien podria pasarle al input form el setTasks
+  
   const newTasks = task => {
     setTasks([...tasks, task]);
   };
@@ -19,10 +17,10 @@ function App() {
   return (
     <div className="todo-app">
       <Header />
-      <div className="ed-grid s-grid-1 s-center">
+      <main className="ed-grid s-grid-1 s-center">
         <FormTask newTasks={newTasks} />
         <TasksList tasks={tasks} setTasks={setTasks} />
-      </div>
+      </main>
       <Footer />
     </div>
   );
