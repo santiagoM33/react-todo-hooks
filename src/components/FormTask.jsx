@@ -36,7 +36,7 @@ const FormTask = ({ newTasks }) => {
 
   return (
     <>
-      <h3>Qur tienes que hacer hoy?</h3>
+      <h3>Que tienes que hacer hoy?</h3>
       <form
         className="ed-grid s-grid-1 s-80 s-to-center"
         onSubmit={handleSubmit}
