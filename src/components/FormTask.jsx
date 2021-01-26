@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from "uuid";
 
 const FormTask = ({ newTasks }) => {
   // State de Tareas
-  // [valor actual, funcion que va a cambiar el valor actual]
   const [task, setTask] = useState({
     task: "",
     description: "",
@@ -11,15 +10,12 @@ const FormTask = ({ newTasks }) => {
   });
 
   const handleChange = e => {
-    //console.log(e.target.name, e.target.value);
-
     setTask({
       ...task,
       [e.target.name]: e.target.value
     });
   };
 
-  // Extrae valores de Tareas
   const { tarea, description } = task;
 
   const handleSubmit = e => {
